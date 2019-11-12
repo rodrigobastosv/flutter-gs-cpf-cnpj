@@ -29,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.14.11"
+  cpf_cnpj_validator:
+    dependency: transitive
+    description:
+      name: cpf_cnpj_validator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.5"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -46,7 +53,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "1b136abd212a0a55c788908c4b0762d5aee09595"
+      resolved-ref: "5bab08dbeee27c4331f35073eac140a2221ff802"
       url: "git://github.com/rodrigobastosv/flutter-gs-cpf-cnpj.git"
     source: git
     version: "0.0.1"

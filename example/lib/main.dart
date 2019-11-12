@@ -25,7 +25,7 @@ class TesteCpfCnpj extends StatelessWidget {
       body: Column(
         children: <Widget>[
           FutureBuilder<PessoaJuridica>(
-              future: FlutterGSCpfCnpj.buscarPessoaJuridica('1040191600010711'),
+              future: FlutterGSCpfCnpj.buscarPessoaJuridica('10401916000107'),
               builder: (_, snapshot) {
                 if (snapshot.hasData) {
                   print(snapshot.data);
@@ -38,7 +38,7 @@ class TesteCpfCnpj extends StatelessWidget {
               },
           ),
           FutureBuilder<PessoaFisica>(
-            future: FlutterGSCpfCnpj.buscarPessoaFisica('0400115220111'),
+            future: FlutterGSCpfCnpj.buscarPessoaFisica('04001152201'),
             builder: (_, snapshot) {
               if (snapshot.hasData) {
                 print(snapshot.data);
