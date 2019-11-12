@@ -12,15 +12,15 @@ class PessoaJuridica {
 
   PessoaJuridica(
       {this.cnpj,
-        this.razao,
-        this.fantasia,
-        this.logradouro,
-        this.numero,
-        this.complemento,
-        this.cep,
-        this.bairro,
-        this.municipio,
-        this.uf});
+      this.razao,
+      this.fantasia,
+      this.logradouro,
+      this.numero,
+      this.complemento,
+      this.cep,
+      this.bairro,
+      this.municipio,
+      this.uf});
 
   PessoaJuridica.fromJson(Map<String, dynamic> json) {
     cnpj = json['cnpj'];
@@ -48,5 +48,10 @@ class PessoaJuridica {
     data['municipio'] = this.municipio;
     data['uf'] = this.uf;
     return data;
+  }
+
+  @override
+  String toString() {
+    return 'PessoaJuridica{cnpj: $cnpj, razao: $razao, fantasia: $fantasia, logradouro: $logradouro, numero: $numero, complemento: $complemento, cep: $cep, bairro: $bairro, municipio: $municipio, uf: $uf}';
   }
 }

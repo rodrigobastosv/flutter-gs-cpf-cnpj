@@ -44,9 +44,11 @@ packages:
   flutter_gs_cpf_cnpj:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: master
+      resolved-ref: a080d23f3d7e2bb13ae046641be25b7a14b24c10
+      url: "git://github.com/rodrigobastosv/flutter-gs-cpf-cnpj.git"
+    source: git
     version: "0.0.1"
   flutter_test:
     dependency: "direct dev"

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gs_cpf_cnpj/flutter_gs_cpf_cnpj.dart';
+import 'package:flutter_gs_cpf_cnpj/pessoa_juridica.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,9 +23,26 @@ class TesteCpfCnpj extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          FutureBuilder(
-            
-          )
+          FutureBuilder<PessoaJuridica>(
+              future: FlutterGSCpfCnpj.buscarPessoaJuridica('10401916000107'),
+              builder: (_, snapshot) {
+                if (snapshot.hasData) {
+                  print(snapshot.data);
+                  return Text('');
+                }
+                return Container();
+              },
+          ),
+          FutureBuilder<PessoaFisica>(
+            future: FlutterGSCpfCnpj.buscarPessoaJuridica('10401916000107'),
+            builder: (_, snapshot) {
+              if (snapshot.hasData) {
+                print(snapshot.data);
+                return Text('');
+              }
+              return Container();
+            },
+          ),
         ],
       ),
     );
