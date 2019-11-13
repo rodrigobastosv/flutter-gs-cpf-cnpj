@@ -10,16 +10,14 @@ import 'pessoa_fisica.dart';
 import 'pessoa_juridica.dart';
 
 class FlutterGSCpfCnpj {
-  static const BASE_URL = 'http://10.0.0.81';
-  static const PORT = 8018;
   static const CPF = 'cpf';
   static const CNPJ = 'cnpj';
 
   static Future<PessoaJuridica> buscarPessoaJuridica(
-      {String urlBase, String cnpj}) async {
+      {String urlBase, int port, String cnpj}) async {
     if (CNPJValidator.isValid(cnpj)) {
       try {
-        final response = await http.get('$BASE_URL:$PORT/$CNPJ/$cnpj');
+        final response = await http.get('$urlBase:$port/$CNPJ/$cnpj');
         return PessoaJuridica.fromJson(jsonDecode(response.body));
       } catch (e) {
         throw e;
@@ -30,11 +28,14 @@ class FlutterGSCpfCnpj {
   }
 
   static Future<PessoaFisica> buscarPessoaFisica(
-      {String urlBase, String cpf, String dtNascimento = '00-00-0000'}) async {
+      {String urlBase,
+      String cpf,
+      int port,
+      String dtNascimento = '00-00-0000'}) async {
     if (CPFValidator.isValid(cpf)) {
       try {
         final response =
-            await http.get('$BASE_URL:$PORT/$CPF/$cpf/$dtNascimento');
+            await http.get('$urlBase:$port/$CPF/$cpf/$dtNascimento');
         return PessoaFisica.fromJson(jsonDecode(response.body));
       } catch (e) {
         throw e;

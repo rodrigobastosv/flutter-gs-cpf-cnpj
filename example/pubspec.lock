@@ -53,7 +53,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "023e5e3c7b6ab2932d5c746ee86ea97fa3e5c6f9"
+      resolved-ref: "73eda0094433811cb9d7af6a8b09c2aa9aa7e96e"
       url: "git://github.com/rodrigobastosv/flutter-gs-cpf-cnpj.git"
     source: git
     version: "0.0.1"
