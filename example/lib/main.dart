@@ -29,7 +29,7 @@ class TesteCpfCnpj extends StatelessWidget {
         children: <Widget>[
           FutureBuilder<PessoaJuridica>(
             future: FlutterGSCpfCnpj.buscarPessoaJuridica(
-                urlBase: BASE_URL, cnpj: '10401916000107'),
+                urlBase: BASE_URL, port: PORT, cnpj: '10401916000107'),
             builder: (_, snapshot) {
               if (snapshot.hasData) {
                 print(snapshot.data);
@@ -43,7 +43,7 @@ class TesteCpfCnpj extends StatelessWidget {
           ),
           FutureBuilder<PessoaFisica>(
             future: FlutterGSCpfCnpj.buscarPessoaFisica(
-                urlBase: BASE_URL, cpf: '04001152201'),
+                urlBase: BASE_URL, port: PORT, cpf: '04001152201'),
             builder: (_, snapshot) {
               if (snapshot.hasData) {
                 print(snapshot.data);
